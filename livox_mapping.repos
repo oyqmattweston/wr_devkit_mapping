@@ -5,9 +5,9 @@ repositories:
     version: devel
   livox_ros_driver2:
     type: git
-    url: git@github.com:westonrobot/livox_ros_driver2.git
+    url: https://github.com/westonrobot/livox_ros_driver2.git
     version: devel
   wrp_ros2:
     type: git
-    url: git@github.com:westonrobot/wrp_ros2.git
-    version: main
+    url: https://github.com/westonrobot/wrp_ros2.git
+    version: devel
