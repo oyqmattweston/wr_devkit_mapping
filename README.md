@@ -41,7 +41,7 @@ The onboard computer with the devkit should have been configured with the follow
     $ cd ~
     $ git clone https://github.com/Livox-SDK/Livox-SDK2.git
     $ cd Livox-SDK2
-    $ cd build && cmake .. && make
+    $ mkdir build && cd build && cmake .. && make
     $ sudo make install
     ```
 
