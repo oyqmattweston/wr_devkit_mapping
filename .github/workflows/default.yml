@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y python3-vcstool software-properties-common
+          sudo apt-get install -y python3-vcstool software-properties-common curl
           sudo apt-get install -y ros-${ROS_DISTRO}-perception-pcl \
             ros-${ROS_DISTRO}-pcl-msgs \
             ros-${ROS_DISTRO}-vision-opencv \
