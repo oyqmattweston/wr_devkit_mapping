@@ -18,6 +18,8 @@ The onboard computer with the devkit should have been configured with the follow
 
 ## Installation
 
+Please refer to the [CI build script](.github/workflows/default.yml) for the most complete and up-to-date installation steps.
+
 * Install the Weston Robot Platform SDK (wrp-sdk)
 
     ```bash
@@ -30,7 +32,7 @@ The onboard computer with the devkit should have been configured with the follow
         sudo tee /etc/apt/sources.list.d/weston-robot.list > /dev/null
     $ sudo apt-get update
 
-    $ sudo apt-get install wrp_sdk
+    $ sudo apt-get install wrp-sdk
     ```
 
     Please refer to [this page](https://docs.westonrobot.net/software/installation_guide.html) for more details of the installation steps.
