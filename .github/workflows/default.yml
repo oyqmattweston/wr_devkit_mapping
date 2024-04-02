@@ -1,0 +1,40 @@
+name: default
+
+on:
+  push:
+    branches:
+      - "**"
+      - "!experiment-*"
+  pull_request:
+    branches:
+      - main
+      - devel
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+        image: ros:humble-ros-base
+    defaults:
+        run:
+          shell: bash
+    steps:
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-vcstool
+          sudo apt-get install -y ros-${ROS_DISTRO}-perception-pcl \
+            ros-${ROS_DISTRO}-pcl-msgs \
+            ros-${ROS_DISTRO}-vision-opencv \
+            ros-${ROS_DISTRO}-xacro
+          sudo add-apt-repository ppa:borglab/gtsam-release-4.1
+          sudo apt-get install -y libgtsam-dev libgtsam-unstable-dev
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Build the project
+        run: |
+          vcs import src < mapping.repos
+          source /opt/ros/$ROS_DISTRO/setup.bash && colcon build --symlink-install
+          

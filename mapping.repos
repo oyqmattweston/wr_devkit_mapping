@@ -1,0 +1,5 @@
+repositories:
+  lio_sam:
+    type: git
+    url: https://github.com/westonrobot/lio_sam.git
+    version: devel
