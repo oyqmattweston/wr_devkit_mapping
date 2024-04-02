@@ -11,7 +11,7 @@ on:
       - devel
 
 jobs:
-  build:
+  build_livox:
     runs-on: ubuntu-latest
     container:
         image: ros:humble-ros-base
@@ -29,11 +29,28 @@ jobs:
             ros-${ROS_DISTRO}-xacro
           sudo add-apt-repository ppa:borglab/gtsam-release-4.1
           sudo apt-get install -y libgtsam-dev libgtsam-unstable-dev
+      - name: Install wrp-sdk
+        run: |
+          sudo install -m 0755 -d /etc/apt/keyrings
+          curl -fsSL http://deb.westonrobot.net/signing.key | sudo gpg --dearmor -o /etc/apt/keyrings/weston-robot.gpg
+          sudo chmod a+r /etc/apt/keyrings/weston-robot.gpg
+          echo \
+            "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/weston-robot.gpg] http://deb.westonrobot.net/$(lsb_release -cs) $(lsb_release -cs) main" | \
+            sudo tee /etc/apt/sources.list.d/weston-robot.list > /dev/null
+          sudo apt-get update
+          sudo apt-get install wrp-sdk
+      - name: Install Livox-SDK
+        run: |
+          mkdir /tmp/livox && cd /tmp/livox
+          git clone https://github.com/Livox-SDK/Livox-SDK.git
+          cd Livox-SDK
+          cd build && cmake .. && make
+          sudo make install
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
       - name: Build the project
         run: |
-          vcs import src < mapping.repos
+          vcs import src < livox_mapping.repos
           source /opt/ros/$ROS_DISTRO/setup.bash && colcon build --symlink-install
