@@ -35,17 +35,17 @@ The onboard computer with the devkit should have been configured with the follow
 
     Please refer to [this page](https://docs.westonrobot.net/software/installation_guide.html) for more details of the installation steps.
 
-* Install Livox SDK (if you have the devkit variant with the Livox Mid-360 Lidar)
+* Install Livox SDK2 (if you have the devkit variant with the Livox Mid-360 Lidar)
 
     ```bash
     $ cd ~
-    $ git clone https://github.com/Livox-SDK/Livox-SDK.git
-    $ cd Livox-SDK
+    $ git clone https://github.com/Livox-SDK/Livox-SDK2.git
+    $ cd Livox-SDK2
     $ cd build && cmake .. && make
     $ sudo make install
     ```
 
-    Note: you can build and install the Livox-SDK at your preferred places other than "~/Livox-SDK". And you can optionally remove the "Livox-SDK" folder after installation.
+    Note: you can build and install the Livox-SDK2 at your preferred places other than "~/Livox-SDK2". And you can optionally remove the "Livox-SDK2" folder after installation.
 
 * Import the ROS packages into the workspace and build
 

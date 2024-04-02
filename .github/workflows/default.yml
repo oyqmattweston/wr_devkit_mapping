@@ -39,11 +39,11 @@ jobs:
             sudo tee /etc/apt/sources.list.d/weston-robot.list > /dev/null
           sudo apt-get update
           sudo apt-get install -y wrp-sdk
-      - name: Install Livox-SDK
+      - name: Install Livox-SDK2
         run: |
           mkdir /tmp/livox && cd /tmp/livox
-          git clone https://github.com/Livox-SDK/Livox-SDK.git
-          cd Livox-SDK
+          git clone https://github.com/Livox-SDK/Livox-SDK2.git
+          cd Livox-SDK2
           cd build && cmake .. && make
           sudo make install
       - name: Checkout
