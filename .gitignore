@@ -3,4 +3,5 @@ install
 log
 
 src/*
+!src/sample_launch
 !src/.gitkeep
