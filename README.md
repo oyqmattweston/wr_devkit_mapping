@@ -49,10 +49,29 @@ Please refer to the [CI build script](.github/workflows/default.yml) for the mos
 
     Note: you can build and install the Livox-SDK2 at your preferred places other than "~/Livox-SDK2". And you can optionally remove the "Livox-SDK2" folder after installation.
 
+* Install GTSAM
+
+    ```bash
+    $ sudo add-apt-repository ppa:borglab/gtsam-release-4.1
+    $ sudo apt install libgtsam-dev libgtsam-unstable-dev
+    ```
+
+* Install additional ROS packages
+
+    ```bash
+    $ source /opt/ros/humble/setup.bash
+    $ sudo apt install ros-$ROS_DISTRO-perception-pcl \
+  	   ros-$ROS_DISTRO-pcl-msgs \
+  	   ros-$ROS_DISTRO-vision-opencv \
+  	   ros-$ROS_DISTRO-xacro
+    ```
+
 * Import the ROS packages into the workspace and build
 
     ```bash
-    $ cd <your-workspace>/wr_devkit_mapping
+    $ cd <your-workspace>
+    $ git clone https://github.com/westonrobot/wr_devkit_mapping.git
+    $ cd wr_devkit_mapping
     # for Livox Mid-360 setup
     $ vcs import src < ./livox_mapping.repos
 
