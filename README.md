@@ -2,7 +2,7 @@
 
 ![default workflow](https://github.com/westonrobot/wr_devkit_mapping/actions/workflows/default.yml/badge.svg?branch=main)
 
-This repository provides a reference setup for using LIO-SAM to do 3D mapping with the mobile robot development kit from Weston Robot.
+This repository provides **a sample setup** for using LIO-SAM to do 3D mapping with the mobile robot development kit from Weston Robot. It mainly serves as a reference to help you get started with your application development as quickly as possible. If you have questions regarding the LIO-SAM algorithm itself, please refer to the original [GitHub repository by the author](https://github.com/TixiaoShan/LIO-SAM) and [relevant research papers](https://github.com/TixiaoShan/LIO-SAM). 
 
 ## Requirements
 
@@ -80,3 +80,22 @@ Please refer to the [CI build script](.github/workflows/default.yml) for the mos
     ```
 
     The build process should finish without any errors.
+
+## Start a mapping session
+
+On the robot, launch the mapping nodes:
+
+```bash
+$ cd <your-workspace>/wr_devkit_mapping
+$ source /opt/ros/humble.bash
+$ source install/setup.bash
+$ ros2 launch sample_launch livox_mapping.launch.py
+```
+
+If you want to check the mapping result, you can run rviz on your computer (make sure your computer is connected to the robot network first)
+
+```bash
+$ ros2 run rviz2 rviz2
+```
+
+You can clone this repository to your computer and load the rviz configuration located at "src/sample_launch/config/rviz2.rviz".
