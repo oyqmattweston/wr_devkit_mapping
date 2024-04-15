@@ -2,7 +2,7 @@
 
 ![default workflow](https://github.com/westonrobot/wr_devkit_mapping/actions/workflows/default.yml/badge.svg?branch=main)
 
-This repository provides **a sample setup** for using LIO-SAM to do 3D mapping with the mobile robot development kit from Weston Robot. It mainly serves as a reference to help you get started with your application development as quickly as possible. If you have questions regarding the LIO-SAM algorithm itself, please refer to the original [GitHub repository by the author](https://github.com/TixiaoShan/LIO-SAM) and [relevant research papers](https://github.com/TixiaoShan/LIO-SAM). 
+This repository provides **a sample setup** for using LIO-SAM to do 3D mapping with the mobile robot development kit from Weston Robot. It mainly serves as a reference to help you get started with your application development as quickly as possible. If you have questions regarding the LIO-SAM algorithm itself, please refer to the original [GitHub repository by the author](https://github.com/TixiaoShan/LIO-SAM) and [relevant research papers](https://github.com/TixiaoShan/LIO-SAM?tab=readme-ov-file#paper). 
 
 ## Requirements
 
