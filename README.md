@@ -33,6 +33,11 @@ Please refer to the [CI build script](.github/workflows/default.yml) for the mos
     $ sudo apt-get update
 
     $ sudo apt-get install wrp-sdk
+
+    # Install drivers for peripherals
+    $ sudo apt-get install -y software-properties-common 
+    $ sudo add-apt-repository ppa:lely/ppa
+    $ sudo apt-get update
     ```
 
     Please refer to [this page](https://docs.westonrobot.net/software/installation_guide.html) for more details of the installation steps.
