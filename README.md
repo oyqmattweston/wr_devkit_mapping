@@ -110,6 +110,16 @@ $ ros2 run rviz2 rviz2
 
 You can clone this repository to your computer and load the rviz configuration located at "src/sample_launch/config/rviz2.rviz".
 
+## Saving the map
+After you have finished mapping, you can save the map using lio_sam's save_map service. The service takes two arguments: resolution and destination.
+  * The resolution is the resolution of the map.
+  * The destination is the path to save the map. **NOTE: destination path is relative to the HOME folder.**
+ 
+For example, to save the map with a resolution of 0.0 to "~/Workspace/map/", you can run the following command
+```bash
+ros2 service call /lio_sam/save_map lio_sam/srv/SaveMap "{resolution: 0.0 , destination: "/Workspace/map/"}"
+```
+
 ## Notes
 1. Depending on the specific hardware configurations, you may need to modify the sample launch files and configuration files to adapt to your setup.  
    Take note of the below in particluar:
