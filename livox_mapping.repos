@@ -2,12 +2,12 @@ repositories:
   lio_sam:
     type: git
     url: https://github.com/westonrobot/lio_sam.git
-    version: devel
+    version: 0a5ef15311f60ee219f6a4a6e77bcb2b5d012d5a
   livox_ros_driver2:
     type: git
     url: https://github.com/westonrobot/livox_ros_driver2.git
-    version: devel
+    version: 16a3738ad477a1eb1766c55f09d7415c8236516f
   wrp_ros2:
     type: git
     url: https://github.com/westonrobot/wrp_ros2.git
-    version: devel
+    version: 30431fd002b7e0a67c295bbf87ab1dc9d5cbb7ee
