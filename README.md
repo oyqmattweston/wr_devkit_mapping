@@ -49,9 +49,9 @@ Please refer to the [CI build script](.github/workflows/default.yml) for the mos
 
     Note: you can build and install the Livox-SDK2 at your preferred places other than "~/Livox-SDK2". And you can optionally remove the "Livox-SDK2" folder after installation.
 
-* Install vcstool **(Make sure you have ros2 installed first)**
+* Install ros-dev-tools **(Make sure you have ros2 installed first)**
     ```bash
-    $ sudo apt install python3-vcstool
+    $ sudo apt install ros-dev-tools
     ```
 
 * Install GTSAM
