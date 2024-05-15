@@ -99,3 +99,9 @@ $ ros2 run rviz2 rviz2
 ```
 
 You can clone this repository to your computer and load the rviz configuration located at "src/sample_launch/config/rviz2.rviz".
+
+## Notes
+1. Depending on the specific hardware configurations, you may need to modify the sample launch files and configuration files to adapt to your setup.  
+   Take note of the below in particluar:
+   1. IP addresses of the lidar and the data ports it uses. (Configuration files used can be inferred from the [launch file](./src/sample_launch/launch/livox_mapping.launch.py)).
+   2. Device path of the IMU in the [launch file](./src/sample_launch/launch/livox_mapping.launch.py).
